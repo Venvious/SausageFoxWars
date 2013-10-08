@@ -86,7 +86,8 @@ class CellLogic:
             tower = self.Space.CreateAtPosition("GreenTower",self.Owner.Transform.Translation)
             tower.Transform.Translation += Vec3(0,0,1)
             tower.GreenTowerLogic.xpos = round(tower.Transform.Translation.x)
-            tower.GreenTowerLogic.ypos = -round(tower.Transform)
+            tower.GreenTowerLogic.ypos = -round(tower.Transform.Translation.y)
+            self.player.money -= 25
         elif(self.towerChoice == 4 and self.player.money >= 50 and not self.cellProp.tower):
             tower = self.Space.CreateAtPosition("YellowTower",self.Owner.Transform.Translation)
             tower.Transform.Translation += Vec3(0,0,1)

@@ -4,6 +4,7 @@ ContentLibrary =
 	Array Files = 
 	[
 		"BlueTower.Archetype.data",
+		"BlueTowerBullet.Archetype.data",
 		"BlueTowerLogic.py",
 		"Cell.Archetype.data",
 		"CellLogic.py",
@@ -19,6 +20,8 @@ ContentLibrary =
 		"Level.data",
 		"PlayerLogic.py",
 		"RedTower.Archetype.data",
+		"RedTowerBullet.Archetype.data",
+		"RedTowerBulletLogic.py",
 		"RedTowerLogic.py",
 		"Space.data",
 		"Tower.Archetype.data",

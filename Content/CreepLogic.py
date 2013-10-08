@@ -13,7 +13,9 @@ class CreepLogic:
         
     def onLogicUpdate(self, UpdateEvent):
         self.Owner.SpriteText.Text = str(self.level)
-        
+        if (self.health <= 0):
+            self.Owner.Destroy()
+    
         
 
 Zero.RegisterComponent("CreepLogic", CreepLogic)
