@@ -32,67 +32,6 @@ class GameLogic:
         
         self.refreshWeight(self.endx, self.endy)
             
-    def refreshWeight2(self, i, j):
-        down = self.node_array[i][j+1]
-        up = self.node_array[i][j-1]
-        right = self.node_array[i+1][j]
-        left = self.node_array[i-1][j]
-        current = self.node_array[i][j]
-        
-        if(down.weight == -1):
-            pass
-        elif(down.tower):
-            if(down.weight > current.weight+1001 or down.weight == -2):
-                down.weight = current.weight+1001
-                self.refreshWeight(i, j+1)
-        elif(down.weight == -2):
-            down.weight = current.weight+1
-            self.refreshWeight(i, j+1)
-        elif(down.weight > current.weight+1):
-            down.weight = current.weight+1
-            self.refreshWeight(i, j+1)
-        
-        if(left.weight == -1):
-            pass
-        elif(left.tower):
-            if(left.weight > current.weight+1001 or left.weight == -2):
-                left.weight = current.weight+1001
-                self.refreshWeight(i-1, j)
-        elif(left.weight == -2):
-            left.weight = current.weight+1
-            self.refreshWeight(i-1, j)
-        elif(left.weight > current.weight+1):
-            left.weight = current.weight+1
-            self.refreshWeight(i-1, j)
-            
-        if(up.weight == -1):
-            pass
-        elif(up.tower):
-            if(up.weight > current.weight+1001 or up.weight == -2):
-                up.weight = current.weight+1001
-                self.refreshWeight(i, j-1)
-        elif(up.weight == -2):
-            up.weight = current.weight+1
-            self.refreshWeight(i, j-1)
-        elif(up.weight > current.weight+1):
-            up.weight = current.weight+1
-            self.refreshWeight(i, j-1)
-            
-        if(right.weight == -1):
-            pass
-        elif(right.tower):
-            if(right.weight > current.weight+1001 or right.weight == -2):
-                right.weight = current.weight+1001
-                self.refreshWeight(i+1, j)
-        elif(right.weight == -2):
-            right.weight = current.weight+1
-            self.refreshWeight(i+1, j)
-        elif(right.weight > current.weight+1):
-            right.weight = current.weight+1
-            self.refreshWeight(i+1, j)
-            
-        #if(i == 2 and j == 4):
-        #print("i: " + str(i) + "j: " + str(j) + "   " + str(current.weight))
         
     def refreshWeight(self, i, j):
         down = self.node_array[i][j+1]

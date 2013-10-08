@@ -3,13 +3,26 @@ import Events
 import Property
 import VectorMath
 
+'''
+
+sweg
+
+ 0+ Empty spaces
+ -1 Wall
+ -2 Unnassigned
+
+'''
+
 class GameLogic:
     def Initialize(self, initializer):
-        self.xsize = 30
-        self.ysize = 10
+        #Snatches the size and end from the MapCreate script
+        self.xsize = self.Space.FindObjectByName("LevelSettings").MapCreate.xsize
+        self.ysize = self.Space.FindObjectByName("LevelSettings").MapCreate.ysize
+        
+        self.endx = self.Space.FindObjectByName("LevelSettings").MapCreate.endx
+        self.endy = self.Space.FindObjectByName("LevelSettings").MapCreate.endy
+        
         self.node_array = [[[0]*self.ysize for i in range(self.ysize)][0]*self.xsize for i in range(self.xsize)]
-        self.endx = 2
-        self.endy = 3
         self.count = 0
         for i in range(self.xsize):
             for j in range(self.ysize):

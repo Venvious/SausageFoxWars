@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Tower",
+		string Name = "End",
 	},
 	Archetyped = 
 	{
-		string Name = "52b8761b52cbe615:Tower",
+		string Name = "527ccba3c4ac5124:End",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2, -3, 0],
+		Vec3 Translation = [2, -3, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -23,7 +23,7 @@ Cog =
 		string SpriteSource = "5275aa4d802dd6dc:Square",
 		bool FlipX = false,
 		bool FlipY = false,
-		Vec4 Color = [1, 0, 0, 1],
+		Vec4 Color = [0, 0.385, 0, 1],
 		bool Visible = true,
 		bool OnTop = false,
 		bool AnimationActive = true,
@@ -31,8 +31,5 @@ Cog =
 		uint StartFrame = 0,
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
-	},
-	TowerLogic = 
-	{
 	},
 },
